@@ -11,13 +11,13 @@ Add your content here.
 To use in your android activity:
 
   * Get your locale
-     _mCurLocale = this.getResources().getConfiguration().locale;_
+     {{{mCurLocale = this.getResources().getConfiguration().locale;}}}
 
   * Set up your I18nTranslator Instance
-     _mI18Translator = new I18nTranslator(mCurLocale.getLanguage());_
+     {{{mI18Translator = new I18nTranslator(mCurLocale.getLanguage());}}}
 
   * Translate your String auto-magically
-     _String text = mI18Translator.translateString("Please enter correct keys to unlock.");_
+     {{{String text = mI18Translator.translateString("Please enter correct keys to unlock.");}}}
 
   * Translate your Android Resource String auto-magically
-     _String text = mTranslator.translateString(getString(R.string.menu_feedback);_
+     {{{String text = mTranslator.translateString(getString(R.string.menu_feedback);}}}
