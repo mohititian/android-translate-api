@@ -13,7 +13,7 @@ To use in your android activity:
   * Get your locale
      {{{mCurLocale = this.getResources().getConfiguration().locale;}}}
 
-  * Set up your I18nTranslator Instance
+  * Set up your translation instance
      {{{mI18Translator = new I18nTranslator(mCurLocale.getLanguage());}}}
 
   * Translate your String auto-magically
