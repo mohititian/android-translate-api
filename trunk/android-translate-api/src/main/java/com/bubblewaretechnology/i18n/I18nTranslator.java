@@ -21,8 +21,11 @@ final public class I18nTranslator {
 	 * @param toLanguage - the locale of the language to translate to 
 	 * @author David Gill
 	 */
-	public I18nTranslator(final String toLanguage)
+	public I18nTranslator(String toLanguage)
 	{
+		if(toLanguage == null)
+			toLanguage = "";
+			
 		lToLanguage = Language.fromString(toLanguage);
 		
 		System.setProperty("http.proxyHost", "proxy");
@@ -44,7 +47,11 @@ final public class I18nTranslator {
 	{
 		String translatedText = "";
 		
-		if (lToLanguage.equals(DEFAULTLANGUAGE))
+		if (lToLanguage == null)
+		{
+			translatedText = text;
+		}
+		else if (lToLanguage.equals(DEFAULTLANGUAGE))
 		{
 			translatedText = text;
 		}
